@@ -1,0 +1,16 @@
+def calculate_expression(expression)
+  begin
+    return eval(expression)
+  rescue Exception => e
+    return "Error: #{e.message}"
+  end
+end
+
+# Пример использования:
+expression1 = "2 + 3 * 5"
+expression2 = "(10 - 5) / 2"
+expression3 = "1 / 0"
+
+puts calculate_expression(expression1)  # Output: 17
+puts calculate_expression(expression2)  # Output: 2.5
+puts calculate_expression(expression3)  # Output: Error: divided by 0
